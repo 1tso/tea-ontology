@@ -662,7 +662,6 @@
         <rdfs:subClassOf>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.tea.com//ontologies/tea.owl#TeaDrink"/>
                     <owl:Class>
                         <owl:complementOf>
                             <owl:Restriction>
@@ -671,6 +670,10 @@
                             </owl:Restriction>
                         </owl:complementOf>
                     </owl:Class>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.tea.com//ontologies/tea.owl#hasFlavourAddition"/>
+                        <owl:someValuesFrom rdf:resource="http://www.tea.com//ontologies/tea.owl#TeaFlavourAddition"/>
+                    </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
         </rdfs:subClassOf>
@@ -680,7 +683,6 @@
                 <owl:someValuesFrom rdf:resource="http://www.tea.com//ontologies/tea.owl#Hibiscus"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment>Каркаде</rdfs:comment>
     </owl:Class>
     
 
@@ -814,7 +816,6 @@
         <rdfs:subClassOf>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.tea.com//ontologies/tea.owl#TeaDrink"/>
                     <owl:Class>
                         <owl:complementOf>
                             <owl:Restriction>
@@ -823,6 +824,10 @@
                             </owl:Restriction>
                         </owl:complementOf>
                     </owl:Class>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.tea.com//ontologies/tea.owl#hasFlavourAddition"/>
+                        <owl:someValuesFrom rdf:resource="http://www.tea.com//ontologies/tea.owl#TeaFlavourAddition"/>
+                    </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
         </rdfs:subClassOf>
@@ -1216,7 +1221,6 @@
         <rdfs:subClassOf>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.tea.com//ontologies/tea.owl#TeaDrink"/>
                     <owl:Class>
                         <owl:complementOf>
                             <owl:Restriction>
@@ -1225,6 +1229,10 @@
                             </owl:Restriction>
                         </owl:complementOf>
                     </owl:Class>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.tea.com//ontologies/tea.owl#hasFlavourAddition"/>
+                        <owl:someValuesFrom rdf:resource="http://www.tea.com//ontologies/tea.owl#TeaFlavourAddition"/>
+                    </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
         </rdfs:subClassOf>
@@ -1438,6 +1446,15 @@
     
 
 
+    <!-- http://www.tea.com//ontologies/tea.owl#BlackTeaExample -->
+
+    <owl:NamedIndividual rdf:about="http://www.tea.com//ontologies/tea.owl#BlackTeaExample">
+        <rdf:type rdf:resource="http://www.tea.com//ontologies/tea.owl#BlackTea"/>
+        <hasTeaPortion rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</hasTeaPortion>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.tea.com//ontologies/tea.owl#BlackTeaWithBerriesExample -->
 
     <owl:NamedIndividual rdf:about="http://www.tea.com//ontologies/tea.owl#BlackTeaWithBerriesExample">
@@ -1561,23 +1578,6 @@
             <rdf:Description rdf:about="http://www.tea.com//ontologies/tea.owl#Pu-erh"/>
             <rdf:Description rdf:about="http://www.tea.com//ontologies/tea.owl#White"/>
             <rdf:Description rdf:about="http://www.tea.com//ontologies/tea.owl#Yellow"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://www.tea.com//ontologies/tea.owl#BlackTea"/>
-            <rdf:Description rdf:about="http://www.tea.com//ontologies/tea.owl#BlackTeaWithBerries"/>
-            <rdf:Description rdf:about="http://www.tea.com//ontologies/tea.owl#EarlGrey"/>
-            <rdf:Description rdf:about="http://www.tea.com//ontologies/tea.owl#GingerTea"/>
-            <rdf:Description rdf:about="http://www.tea.com//ontologies/tea.owl#GreenTea"/>
-            <rdf:Description rdf:about="http://www.tea.com//ontologies/tea.owl#HibiscusTea"/>
-            <rdf:Description rdf:about="http://www.tea.com//ontologies/tea.owl#JasmineTea"/>
-            <rdf:Description rdf:about="http://www.tea.com//ontologies/tea.owl#LimeTreeTea"/>
-            <rdf:Description rdf:about="http://www.tea.com//ontologies/tea.owl#Masala"/>
-            <rdf:Description rdf:about="http://www.tea.com//ontologies/tea.owl#OolongTea"/>
-            <rdf:Description rdf:about="http://www.tea.com//ontologies/tea.owl#SeaBuckthornTea"/>
-            <rdf:Description rdf:about="http://www.tea.com//ontologies/tea.owl#YellowTea"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
